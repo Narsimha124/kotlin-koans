@@ -17,23 +17,23 @@ import util.TODO
         fun task1(collection: Collection<Int>): String {
             print("collection is: $collection \n")
             collection.joinToString(prefix = "{", postfix = "}")
-           // val sb = StringBuilder()
-           // sb.append("{")
+            val sb = StringBuilder()
+            sb.append("{")
             val iterator = collection.iterator()
             print("iterator is: $iterator \n")
             while (iterator.hasNext()) {
                 val element = iterator.next()
 
                 print("element is : $element \n")
-              //  sb.append(element)
+                sb.append(element)
                 if (iterator.hasNext()) {
-                  //  sb.append(", ")
+                  sb.append(", ")
                 }
             }
-           // sb.append("}")
+           sb.append("}")
             //print("elements after append : $sb.toString()");
-           // return sb.toString()
-            return collection.toString()
+            return sb.toString()
+            //return collection.toString()
         }
 //fun task1(collection: Collection<Int>): String {
 //    todoTask1(collection)
