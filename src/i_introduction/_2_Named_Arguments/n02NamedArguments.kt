@@ -3,6 +3,7 @@ package i_introduction._2_Named_Arguments
 import i_introduction._1_Java_To_Kotlin_Converter.task1
 import util.TODO
 import util.doc2
+import java.net.SocketOptions
 
 // default values for arguments
 fun bar(i: Int, s: String = "", b: Boolean = true) {}
@@ -21,9 +22,15 @@ fun todoTask2(): Nothing = TODO(
         Don't forget to remove the 'todoTask2()' invocation which throws an exception.
     """,
     documentation = doc2(),
-    references = { collection: Collection<Int> -> task1(collection); collection.joinToString() })
-
+    references = {
+        collection: Collection<Int> -> task1(collection);
+//        var builder=StringBuilder()
+//        builder.append("{")
+//        collection.joinToString()
+//    builder.append("}")
+    })
+//fun joinToString(options: Collection<String>)=options.joinToString(prefix = "[",postfix = "[")
 fun task2(collection: Collection<Int>): String {
-    todoTask2()
-    return collection.joinToString()
+    //todoTask2()
+    return collection.joinToString(prefix = "{",postfix = "}")
 }
