@@ -8,7 +8,6 @@ fun todoTask0(): Nothing = TODO(
         Task 0.
 
         Read README.md to learn how to work with this project and check your solutions.
-
         Using 'documentation =' below the task description you can open the related part of the online documentation.
             Press 'Ctrl+Q'(Windows) or 'F1'(Mac OS) on 'doc0()' to call the "Quick Documentation" action;
             "See also" section gives you a link.
