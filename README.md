@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![official JetBrains project](http://jb.gg/badges/official-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
 Kotlin Koans
@@ -81,3 +82,6 @@ You can solve the similar tasks using Educational Plugin or in the browser:
 - online version of koans http://try.kotl.in
 
 The koans tasks for web-demo and educational plugin can be found here: https://github.com/Kotlin/kotlin-koans-edu
+=======
+# kotlin
+>>>>>>> 1422bcdc540a0774eb5f9fb9196daed83eb8592b
