@@ -1,20 +1,22 @@
 package i_introduction._3_Default_Arguments
 
-import org.junit.Assert.assertEquals
+import org.junit.After
+import org.junit.Assert.*
+import org.junit.Before
 import org.junit.Test
 
 class N03DefaultArgumentsKtTest {
+
+    @Test fun isNotNull(){
+        assertNotNull(useFoo())
+        fun toGet(collection: Collection<String>):String{
+            return useFoo().toString()
+        }
+        assertEquals("[a42b1C42D2]",toGet(useFoo()))
+    }
 
     @Test
     fun testDefaultAndNamedParams() {
         assertEquals("[a42b1C42D2]", useFoo().toString())
     }
-//    @Test
-//    fun testDefaultAndNamedParamsAddComma() {
-//        assertEquals("[a42, b1, C42, D2]", useFoo())
-//    }
-//    @Test
-//    fun testAddSymbolAndNamedParams() {
-//        assertEquals("[a42b1C42D2]", useFoo().toString())
-//    }
 }

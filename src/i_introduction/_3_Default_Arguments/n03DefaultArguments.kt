@@ -24,10 +24,3 @@ fun useFoo()= listOf(
         foo(name="d", number=2, toUpperCase=true)
 
 )
-//fun task3(): String {
-//    todoTask3()
-//    return (foo("a") +
-//            foo("b", number = 1) +
-//            foo("c", toUpperCase = true) +
-//            foo(name = "d", number = 2, toUpperCase = true))
-//}
