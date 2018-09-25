@@ -24,9 +24,6 @@ fun useFoo()= listOf(
         foo(name="d", number=2, toUpperCase=true)
 
 )
-//fun onw():Any {
-//    "[" + useFoo() + "]"
-//}
 //fun task3(): String {
 //    todoTask3()
 //    return (foo("a") +
