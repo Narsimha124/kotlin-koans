@@ -5,6 +5,7 @@ import org.junit.Test
 
 class N01JavaToKotlinConverterKtTest {
     @Test fun collection() {
-        assertEquals("{1, 2, 3, 4, 25}", task1(listOf(1, 2, 3, 4, 5)).toString())
+        //assertEquals("{1, 2, 3, 4, 25}", task1(listOf(1, 2, 3, 4, 5)).toString())
+        assertEquals("{1, 2, 3, 4, 5}", task1(listOf(1, 2, 3, 4, 5)))
     }
 }

@@ -23,6 +23,9 @@ fun todoTask2(): Nothing = TODO(
     documentation = doc2(),
     references = {
         collection: Collection<Int> -> task1(collection);})
+//fun joinOptions(options: Collection<String>) = options.joinToString(", ","[","]")
+
 fun task2(collection: Collection<Int>): String {
     return collection.joinToString(prefix = "{",postfix = "}")
+
 }
