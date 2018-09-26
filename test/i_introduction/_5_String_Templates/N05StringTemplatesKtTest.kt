@@ -7,11 +7,13 @@ import java.util.regex.Pattern
 
 class N05StringTemplatesKtTest {
     @Test fun match() {
-        assertTrue("11 MAR 1952".matches(task5().toRegex()))
+        assertTrue("11 MAR 1950".matches(task5().toRegex()))
     }
 
     @Test fun match1() {
-        assertTrue("24 AUG 1957".matches(task5().toRegex()))
+        assertTrue("01 NRI 1234 ".matches(task5().toRegex()))
+        assertFalse("01 NRI 1234 ".matches(task5().toRegex()))
+
     }
 
     @Test fun doNotMatch() {
