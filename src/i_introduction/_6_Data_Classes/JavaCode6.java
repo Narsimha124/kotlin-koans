@@ -12,7 +12,6 @@ public class JavaCode6 extends JavaCode {
             this.name = name;
             this.age = age;
         }
-
         public String getName() {
             return name;
         }

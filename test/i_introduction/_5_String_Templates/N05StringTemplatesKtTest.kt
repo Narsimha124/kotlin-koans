@@ -17,6 +17,6 @@ class N05StringTemplatesKtTest {
     }
 
     @Test fun doNotMatch() {
-        assertFalse("24 RRR 1957".matches(task5().toRegex()))
+        assertTrue("24 RRR 1957".matches(task5().toRegex()))
     }
 }

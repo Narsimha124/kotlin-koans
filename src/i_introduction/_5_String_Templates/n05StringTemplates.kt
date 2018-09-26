@@ -36,3 +36,4 @@ fun todoTask5(): Nothing = TODO(
     references = { getPattern(); month })
 
 fun task5(): String = todoTask5()
+
