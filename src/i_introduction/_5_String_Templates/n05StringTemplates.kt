@@ -2,6 +2,7 @@ package i_introduction._5_String_Templates
 
 import util.TODO
 import util.doc5
+import java.util.regex.Pattern
 
 fun example1(a: Any, b: Any) =
         "This is some text in which variables ($a, $b) appear."
@@ -23,18 +24,30 @@ String template entries (${42}) are allowed here.
 //fun getPattern(): String= """\d{2} ${month} \d{4}"""
 //fun example() = "13.06.1992".matches(getPattern().toRegex()) //true
 
-val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+var month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
 fun getPattern(): String= """\d{2} ${month} \d{4}"""
 
-fun todoTask5(): Nothing = TODO(
-    """
-        Task 5.
-        Copy the body of 'getPattern()' to the 'task5()' function below
-        and rewrite it in such a way that it matches format: '13 JUN 1992'.
-        Use the 'month' variable.
-    """,
-    documentation = doc5(),
-    references = { getPattern(); month })
+//fun todoTask5(): Nothing = TODO(
+//    """
+//        Task 5.
+//        Copy the body of 'getPattern()' to the 'task5()' function below
+//        and rewrite it in such a way that it matches format: '13 JUN 1992'.
+//        Use the 'month' variable.
+//    """,
+//    documentation = doc5(),
+//    references = { getPattern(); month })
 
-fun task5(): String = todoTask5()
+fun getMonth():Any{
+  //val currentMonth:String=getPattern();
+    //return currentMonth;
+//    when(""){
+//        "String" -> getPattern();month
+//
+//    }
+return getPattern();month
+}
+
+fun task5(): Any= print(getMonth().toString())
+
+
 
