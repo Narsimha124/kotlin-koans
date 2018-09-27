@@ -9,8 +9,6 @@ import java.util.Collection;
 public class JavaCode4 extends JavaCode {
     public boolean task4(Collection<Integer> collection) {
         System.out.print(collection);
-       // System.out.print("collection is: $collection"  );
-        //return true;
         return Iterables.any(collection, new Predicate<Integer>() {
             @Override
             public boolean apply(Integer element) {

@@ -1,6 +1,7 @@
 package i_introduction._7_Nullable_Types
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotNull
 import org.junit.Test
 
 class N07NullableTypesKtTest {
@@ -23,20 +24,20 @@ class N07NullableTypesKtTest {
         assertEquals("The function 'sendMessage' should${if (shouldBeInvoked) "" else "n't"} be invoked",
                 shouldBeInvoked, invoked)
     }
-
     @Test fun everythingIsOk() {
-        testSendMessageToClient(Client(PersonalInfo("bob@gmail.com")),
+        testSendMessageToClient(Client(PersonalInfo("narsi@gmail.com")),
                 "Hi Bob! We have an awesome proposition for you...",
-                "bob@gmail.com",
+                "narsi@gmail.com",
                 true)
     }
 
     @Test fun noMessage() {
-        testSendMessageToClient(Client(PersonalInfo("bob@gmail.com")), null)
+        testSendMessageToClient(Client(PersonalInfo("nasi@gmail.com")), null)
     }
 
     @Test fun noEmail() {
-        testSendMessageToClient(Client(PersonalInfo(null)), "Hi Bob! We have an awesome proposition for you...")
+        assertNotNull(testSendMessageToClient(Client(PersonalInfo(null)), "Hi Narsimha! We have an awesome proposition for you..."))
+
     }
 
     @Test fun noPersonalInfo() {

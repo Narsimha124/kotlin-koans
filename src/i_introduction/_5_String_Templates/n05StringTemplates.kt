@@ -19,11 +19,12 @@ you don't need to escape a backslash by a backslash.
 String template entries (${42}) are allowed here.
 """
 
-fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
-
-fun example() = "13.06.1992".matches(getPattern().toRegex()) //true
+//fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
+//fun getPattern(): String= """\d{2} ${month} \d{4}"""
+//fun example() = "13.06.1992".matches(getPattern().toRegex()) //true
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+fun getPattern(): String= """\d{2} ${month} \d{4}"""
 
 fun todoTask5(): Nothing = TODO(
     """
