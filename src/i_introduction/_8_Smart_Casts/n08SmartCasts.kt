@@ -14,15 +14,5 @@ fun eval(e: Expr): Int =
         when (e) {
             is Num-> e.value
             is Sum-> eval(e.left)+ eval(e.right)
-            else-> throw IllegalArgumentException("Unkow Expression")
+            //else-> throw IllegalArgumentException("Unkow Expression")
         }
-
-fun todoTask8(expr: Expr): Nothing = TODO(
-    """
-        Task 8.
-        Complete the implementation of the 'eval' function above using smart casts and 'when' expression.
-        The 'JavaCode8.eval' method provides the similar functionality written in Java.
-    """,
-    documentation = doc8(),
-    references = { JavaCode8().eval(expr) })
-
