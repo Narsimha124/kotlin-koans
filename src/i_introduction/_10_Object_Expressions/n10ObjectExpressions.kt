@@ -1,8 +1,12 @@
 package i_introduction._10_Object_Expressions
 
+import i_introduction._8_Smart_Casts.Num
+import i_introduction._8_Smart_Casts.Sum
+import i_introduction._8_Smart_Casts.eval
 import util.TODO
 import util.doc10
 import java.util.*
+import kotlin.collections.ArrayList
 
 fun todoTask10(): Nothing = TODO(
     """
@@ -17,7 +21,17 @@ fun todoTask10(): Nothing = TODO(
 )
 
 fun task10(): List<Int> {
-    val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
+
+   // val arrayList = arrayListOf(1, 5, 2)
+    val arrayList = arrayListOf(1, 56, 12)
+//           when (arrayList) {
+//            Collections.sort(arrayList, { x, y -> y - x })
+//               }
+
+        Collections.sort(arrayList, { x, y -> y - x })
+    //}
+//    Collections.sort(arrayList, object : Comparator<Int> {
+//        override fun compare(x: Int, y: Int) = y - x
+//    })
     return arrayList
 }

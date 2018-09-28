@@ -6,6 +6,6 @@ import org.junit.Test
 
 class N06DataClassesKtTest {
     @Test fun testListOfPeople() {
-        assertEquals("[Person(name=Alice, age=29)]", getAllInfo().toString())
+        assertEquals("[Person(name=NARSI, age=26)]", getAllInfo().toString())
     }
 }

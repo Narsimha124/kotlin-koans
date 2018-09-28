@@ -37,17 +37,17 @@ fun getPattern(): String= """\d{2} ${month} \d{4}"""
 //    documentation = doc5(),
 //    references = { getPattern(); month })
 
-fun getMonth():Any{
-  //val currentMonth:String=getPattern();
-    //return currentMonth;
-//    when(""){
-//        "String" -> getPattern();month
-//
-//    }
-return getPattern();month
-}
+//fun getMonth():Any{
+//  //val currentMonth:String=getPattern();
+//    //return currentMonth;
+////    when(""){
+////        "String" -> getPattern();month
+////
+////    }
+//return getPattern();month
+//}
 
-fun task5(): Any= print(getMonth().toString())
+fun task5(): Any= getPattern()
 
 
 

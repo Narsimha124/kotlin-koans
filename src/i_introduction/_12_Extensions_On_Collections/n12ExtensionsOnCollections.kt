@@ -2,6 +2,7 @@ package i_introduction._12_Extensions_On_Collections
 
 import util.TODO
 import util.doc12
+import java.util.*
 
 fun todoTask12(): Nothing = TODO(
     """
@@ -17,7 +18,10 @@ fun todoTask12(): Nothing = TODO(
 )
 
 fun task12(): List<Int> {
-    todoTask12()
-    return arrayListOf(1, 5, 2)
+    //todoTask12()
+//    val list= arrayListOf<Int>(1,5,2)
+//    Collections.sort(list,{x,y->y-x})
+    return arrayListOf(6, 12, 99).sorted().reversed()
+    //return list
 }
 
