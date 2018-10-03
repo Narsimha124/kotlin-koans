@@ -8,13 +8,13 @@ import org.junit.Test
 class N22FoldKtTest {
     @Test fun testGetProductsOrderedByAllCustomers() {
         val testShop = shop("test shop for 'fold'",
-                customer(lucas, Canberra,
+                customer(hyderabad, hyd_chi_city,
                         order(idea),
-                        order(webStorm)
+                        order(karbon)
                 ),
-                customer(reka, Budapest,
+                customer(mumbai, puna,
                         order(idea),
-                        order(youTrack)
+                        order(celcon)
                 )
         )
         assertEquals(setOf(idea), testShop.getSetOfProductsOrderedByEachCustomer())

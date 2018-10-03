@@ -6,10 +6,10 @@ import org.junit.Test
 
 class N17MaxMinKtTest {
     @Test fun testCustomerWithMaximumNumberOfOrders() {
-        assertEquals(customers[reka], shop.getCustomerWithMaximumNumberOfOrders())
+        assertEquals(customers[mumbai], shop.getCustomerWithMaximumNumberOfOrders())
     }
 
     @Test fun testTheMostExpensiveOrderedProduct() {
-        assertEquals(rubyMine, customers[nathan]!!.getMostExpensiveOrderedProduct())
+        assertEquals(iphone, customers[bangulor]!!.getMostExpensiveOrderedProduct())
     }
 }
