@@ -5,6 +5,8 @@ fun main(args: Array<String>) {
     customersFromCity()
     checkAllCustomers()
 }
+
+
 fun checkAllCustomers() {
     shop.checkAllCustomersAreFrom(hyd_chi_city)}
 

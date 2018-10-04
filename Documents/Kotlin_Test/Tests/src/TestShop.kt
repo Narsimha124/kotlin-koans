@@ -32,6 +32,7 @@ val puna = City("puna")
 val noyadia = City("noyadia")
 val kolkatha_bangular_city = City("kolkatha_bangular_city")
 
+
 fun customer(name: String, city: City, vararg orders: Order) = Customer(name, city, orders.toList())
 fun order(vararg products: Product, isDelivered: Boolean = true) = Order(products.toList(), isDelivered)
 fun shop(name: String, vararg customers: Customer) = Shop(name, customers.toList())
