@@ -7,6 +7,7 @@ import org.junit.Test
 
 class N18SortKtTest {
     @Test fun testGetCustomersSortedByNumberOfOrders() {
+
         assertEquals(sortedCustomers, shop.getCustomersSortedByNumberOfOrders())
     }
 }

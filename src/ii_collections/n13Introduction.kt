@@ -15,7 +15,6 @@ fun example0(list: List<Int>) {
    print(" list of set is:  $list.toSet() ");
    print("list of Collections is:  $list.toCollection(HashSet<Int>()")
 }
-
 fun Shop.getSetOfCustomers(): Set<Customer> {
     // Return a set containing all the customers of this shop
     println(" customers.toSet():  ${customers.toSet()}")

@@ -2,10 +2,12 @@ package ii_collections
 
 import ii_collections.data.*
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
 import org.junit.Test
 
 class N23CompoundTasksKtTest {
     @Test fun testGetCustomersWhoOrderedProduct() {
+        assertNotEquals(setOf(customers[mumbai], customers[vijayawada]), shop.getCustomersWhoOrderedProduct(idea))
         assertEquals(setOf(customers[mumbai], customers[kolkatha]), shop.getCustomersWhoOrderedProduct(idea))
     }
 
@@ -13,13 +15,15 @@ class N23CompoundTasksKtTest {
         val testShop = shop("test shop for 'most expensive delivered product'",
                 customer(hyderabad, hyd_chi_city,
                         order(idea, isDelivered = false),
-                        order(samsung)
+                        order(idea)
                 )
         )
-        assertEquals(samsung, testShop.customers[0].getMostExpensiveDeliveredProduct())
+       assertNotEquals(samsung, testShop.customers[0].getMostExpensiveDeliveredProduct())
+        assertEquals(idea, testShop.customers[0].getMostExpensiveDeliveredProduct())
     }
 
     @Test fun testNumberOfTimesEachProductWasOrdered() {
+       // assertEquals(4, shop.getNumberOfTimesProductWasOrdered(samsung))
         assertEquals(4, shop.getNumberOfTimesProductWasOrdered(idea))
     }
 
@@ -27,7 +31,10 @@ class N23CompoundTasksKtTest {
         assertEquals("A customer may order a product for several times",
                 3, shop.getNumberOfTimesProductWasOrdered(samsung))
     }
-
+    @Test fun testNumberOfTimesEachProductWasOrderedForRepeatedProducts() {
+        assertEquals("A customer may order a product for several times",
+                1, shop.getNumberOfTimesProductWasOrdered(appo))
+    }
     @Test fun testNumberOfTimesEachProductWasOrderedForRepeatedInOrderProduct() {
         assertEquals("An order may contain a particular product more than once",
                 3, shop.getNumberOfTimesProductWasOrdered(redmi))

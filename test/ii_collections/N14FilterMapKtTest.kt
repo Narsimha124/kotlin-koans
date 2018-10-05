@@ -2,6 +2,7 @@ package ii_collections
 
 import ii_collections.data.*
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNotEquals
 import org.junit.Test
 
 class N14FilterMapKtTest {
@@ -13,5 +14,10 @@ class N14FilterMapKtTest {
      */
     @Test fun testCustomersFromCity() {
         assertEquals(listOf(customers[hyderabad], customers[chianni]), shop.getCustomersFrom(hyd_chi_city))
+        assertEquals(listOf(customers[mumbai]), shop.getCustomersFrom(puna))
+        assertNotEquals(listOf(customers[hyderabad]), shop.getCustomersFrom(hyd_chi_city))
+//        assertEquals(listOf(customers[hyderabad], customers[chianni]), shop.getCustomersFrom(hyd_chi_city))
+
+
     }
 }

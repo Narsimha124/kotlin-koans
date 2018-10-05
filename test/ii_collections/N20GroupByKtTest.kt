@@ -8,5 +8,6 @@ import org.junit.Test
 class N20GroupByKtTest {
     @Test fun testGroupCustomersByCity() {
         assertEquals(groupedByCities, shop.groupCustomersByCity())
+
     }
 }

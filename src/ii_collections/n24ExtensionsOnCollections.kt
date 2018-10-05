@@ -10,10 +10,15 @@ fun todoTask24(): Nothing = TODO(
     """,
         references = { c: Collection<String> -> _24_JavaCode().doSomethingStrangeWithCollection(c) }
 )
-
 fun doSomethingStrangeWithCollection(collection: Collection<String>): Collection<String>? {
-    val groupsByLength = collection.groupBy { s -> todoTask24() }
+    println("collection: $collection")
+    val groupsByLength = collection.groupBy { s ->s[0]}
+    print("groupsByLength $groupsByLength")
 
-    return groupsByLength.values.maxBy { group -> todoTask24() }
+    return groupsByLength.values.maxBy { group ->group[0]}
+//        for (i in 1..group.size) {
+//            group(i)
+//        }
+//    }
 }
 

@@ -8,10 +8,11 @@ import org.junit.Test
 
 class N19SumKtTest {
     @Test fun testGetTotalOrderPrice() {
-        assertEquals(148.0, customers[bangulor]!!.getTotalOrderPrice(), 0.001)
+        assertEquals(76498.0, customers[bangulor]!!.getTotalOrderPrice(), 0.001)
+       // assertEquals(683.0178571428571, customers[bangulor]!!.getTotalOrderPrice(), 0.001)
     }
 
     @Test fun testTotalPriceForRepeatedProducts() {
-        assertEquals(586.0, customers[hyderabad]!!.getTotalOrderPrice(), 0.001)
+        assertEquals(74996.0, customers[hyderabad]!!.getTotalOrderPrice(), 0.001)
     }
 }

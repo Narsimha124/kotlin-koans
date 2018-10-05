@@ -13,10 +13,11 @@ class N22FoldKtTest {
                         order(karbon)
                 ),
                 customer(mumbai, puna,
-                        order(idea),
-                        order(celcon)
+                        order(htc),
+                        order(idea)
                 )
         )
         assertEquals(setOf(idea), testShop.getSetOfProductsOrderedByEachCustomer())
+        //assertEquals(setOf(celcon), testShop.getSetOfProductsOrderedByEachCustomer())
     }
 }

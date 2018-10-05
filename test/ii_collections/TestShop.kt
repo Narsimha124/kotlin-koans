@@ -4,7 +4,7 @@ import ii_collections.*
 
 //products
 val idea = Product("Idea", 12999.0)
-val samsung = Product("Samsung", 21999.0)
+val samsung = Product("Samsung", 2999.0)
 val htc = Product("htc", 13999.0)
 val appo = Product("appo", 16999.0)
 val vivo = Product("vivo", 11999.0)
@@ -62,17 +62,13 @@ val shop = shop("jb test shop",
                 order(redmi)
         )
 )
-
 val customers: Map<String, Customer> = shop.customers.fold(hashMapOf(), {
     map, customer ->
     map[customer.name] = customer
     map
 })
-
 val orderedProducts = setOf(idea, samsung, htc, appo, iphone, karbon, redmi)
-
 val sortedCustomers = listOf(chianni, bangulor, delhi, kolkatha, hyderabad, vijayawada, mumbai).map { customers[it] }
-
 val groupedByCities = mapOf(
         hyd_chi_city to listOf(hyderabad, chianni),
         ban_city to listOf(bangulor),

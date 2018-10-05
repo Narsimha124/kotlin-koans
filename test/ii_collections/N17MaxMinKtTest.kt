@@ -8,7 +8,6 @@ class N17MaxMinKtTest {
     @Test fun testCustomerWithMaximumNumberOfOrders() {
         assertEquals(customers[mumbai], shop.getCustomerWithMaximumNumberOfOrders())
     }
-
     @Test fun testTheMostExpensiveOrderedProduct() {
         assertEquals(iphone, customers[bangulor]!!.getMostExpensiveOrderedProduct())
     }
