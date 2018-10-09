@@ -5,8 +5,13 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class N26InRangeKtTest {
+
     fun doTest(date: MyDate, first: MyDate, last: MyDate, shouldBeInRange: Boolean) {
+        println("====================================")
+        println("date:$date, 'First: $first, 'Last: $last InRange: $shouldBeInRange")
         val message = "The date ${date.s} should${if (shouldBeInRange) "" else "n't"} be in range: ${first.s}..${last.s}"
+        println("===================================")
+        println("Message:$message, 'InRange: $shouldBeInRange")
         assertEquals(message, shouldBeInRange, checkInRange(date, first, last))
     }
 
@@ -44,6 +49,6 @@ class N26InRangeKtTest {
     }
 
     @Test fun testInvalidRangeEqualsToEnd() {
-        doTest(MyDate(2014, 1, 1), MyDate(2015, 1, 1), MyDate(2014, 1, 1), shouldBeInRange = false)
+        doTest(MyDate(2014, 1, 1), MyDate(2014, 12, 12), MyDate(2013, 1, 1), shouldBeInRange = false)
     }
 }
