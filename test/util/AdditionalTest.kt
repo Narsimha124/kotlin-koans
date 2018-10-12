@@ -21,7 +21,6 @@ class AdditionalTest {
         )
         assertTrue("${JavaCode.set}", JavaCode.set.isEmpty())
     }
-
     private fun invokeTests(vararg tests: () -> Unit) {
         for (test in tests) {
             try {
