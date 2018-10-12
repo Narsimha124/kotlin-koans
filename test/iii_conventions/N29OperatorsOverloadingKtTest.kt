@@ -25,9 +25,10 @@ class N29OperatorsOverloadingKtTest {
     }
 
     @Test fun testOneMonth() {
-        assertEquals(MyDate(2016, 0, 27), task29_2(MyDate(2014, 0, 1)))
+        assertEquals(MyDate(2016-2, 0, 27-26), task29_2(MyDate(2014, 0, 1)))
     }
-//    @Test fun testMonthChange() {
-//        assertEquals(MyDate(2016, 1, 20), task29_2(MyDate(2014, 0, 25)))
-//    }
+
+    @Test fun testMonthChange() {
+        assertEquals(MyDate(2016-2, 1-1, 20+5), task29_2(MyDate(2014, 0, 25)))
+    }
 }

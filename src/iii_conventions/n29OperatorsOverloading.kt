@@ -35,6 +35,8 @@ fun task29_2(today: MyDate): MyDate {
 
  //operator fun BigDecimal.times(today + YEAR * 2 + WEEK *3 + DAY *5: BigDecimal) = this.multiply( 2 +3 + 5)
    // operator fun BigInteger.times(today: MyDate: BigInteger): BigInteger
-//return  today + YEAR * 2 + WEEK * 3 + DAY * 15
-return today
+//return  today + YEAR * 2 + WEEK * 3 + DAY * 5
+  //return today + YEAR * 2 + WEEK * 3 + DAY *15
+    return  today
+
 }

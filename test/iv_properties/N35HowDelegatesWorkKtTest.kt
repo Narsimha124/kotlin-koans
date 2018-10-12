@@ -6,11 +6,11 @@ import org.junit.Test
 
 class N35HowDelegatesWorkKtTest {
     @Test fun testDate() {
-        val d = D()
+        val delegateInfo = DelegateInfo()
         /* Month numbering starts with 0 (0-Jan, 1-Feb, ... 11-Dec) */
-        d.date = MyDate(2014, 1, 13)
-        assertEquals(2014, d.date.year)
-        assertEquals(1, d.date.month)
-        assertEquals(13, d.date.dayOfMonth)
+        delegateInfo.date = MyDate(2018, 1, 12)
+        assertEquals(2018, delegateInfo.date.year)
+        assertEquals(1, delegateInfo.date.month)
+        assertEquals(12, delegateInfo.date.dayOfMonth)
     }
 }

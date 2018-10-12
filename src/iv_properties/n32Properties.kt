@@ -5,9 +5,18 @@ import util.doc32
 
 class PropertyExample() {
     var counter = 0
-    var propertyWithCounter: Int? = todoTask32()
+    var propertyWithCounter: Int? = get()
+     fun get(): Int {
+        for (i in propertyWithCounter.toString())
+            counter++
+        return counter
+    }
+    //(or)
+//    set(v: Int?) {
+//        field = v
+//        counter++
+//    }
 }
-
 fun todoTask32(): Nothing = TODO(
     """
         Task 32.

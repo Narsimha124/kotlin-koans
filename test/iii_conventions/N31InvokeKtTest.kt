@@ -4,8 +4,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class N31InvokeKtTest {
+
     @Test fun testTask17() {
-        assertEquals(4, task31(Invokable()))
+        assertEquals(2, task31(Invokable()))
     }
 
     @Test fun testNumberOfInvocations() {
