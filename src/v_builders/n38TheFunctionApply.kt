@@ -8,24 +8,50 @@ fun todoTask38(): Nothing = TODO(
     """
 )
 
-fun <T> T.myApply(f: T.() -> Unit): T {
-    todoTask38()
+//fun <T> T.myApply(f: T.() -> Unit): T {
+//    return receiver.f()
+//}
+//
+//fun buildString(): String {
+//    return StringBuilder().myApply {
+//        append("Numbers: ")
+//        for (i in 1..10) {
+//            append(i)
+//        }
+//    }.toString()
+//}
+//
+//fun buildMap(): Map<Int, String> {
+//    return hashMapOf<Int, String>().myApply {
+//        put(0, "0")
+//        for (i in 1..10) {
+//            put(i, "$i")
+//        }
+//    }
+//}
+fun <T, R> myWith(receiver: T, f: T.() -> R): R {
+    return receiver.f()
 }
 
 fun buildString(): String {
-    return StringBuilder().myApply {
+    val stringBuilder = StringBuilder()
+    myWith (stringBuilder) {
         append("Numbers: ")
         for (i in 1..10) {
             append(i)
         }
-    }.toString()
+    }
+    return stringBuilder.toString()
 }
 
 fun buildMap(): Map<Int, String> {
-    return hashMapOf<Int, String>().myApply {
+    val map = hashMapOf<Int, String>()
+    myWith (map) {
         put(0, "0")
         for (i in 1..10) {
             put(i, "$i")
         }
     }
+    return map
 }
+

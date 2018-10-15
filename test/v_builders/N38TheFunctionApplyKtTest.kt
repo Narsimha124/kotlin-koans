@@ -9,10 +9,13 @@ class N38TheFunctionApplyKtTest {
         val expected = StringBuilder().apply {
             append("Numbers: ")
             for (i in 1..10) {
-                append(i)
+               println(append(i))
             }
         }.toString()
+        println("excepted is value i : $expected")
         val actual = buildString()
+        println("actual is value i : $actual")
+
         assertEquals("String should be built:", expected, actual)
     }
 

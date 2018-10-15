@@ -13,14 +13,15 @@ open class Tag(val name: String) {
             "</$name>"
     }
 }
-
 class Attribute(val name : String, val value : String) {
     override fun toString() = """$name="$value""""
 }
 
 fun <T: Tag> T.set(name: String, value: String?): T {
+    println("name is: $name, value is: $value")
     if (value != null) {
         attributes.add(Attribute(name, value))
+        println("add attributes values is: ${attributes.forEach { attributes }}")
     }
     return this
 }
@@ -28,9 +29,9 @@ fun <T: Tag> T.set(name: String, value: String?): T {
 fun <T: Tag> Tag.doInit(tag: T, init: T.() -> Unit): T {
     tag.init()
     children.add(tag)
+        print(" add children is: $children \n tag value is : $tag \n")
     return tag
 }
-
 class Html: Tag("html")
 class Table: Tag("table")
 class Center: Tag("center")
